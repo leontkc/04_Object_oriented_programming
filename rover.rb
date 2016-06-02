@@ -3,24 +3,33 @@ class Rover
   def initialize (x_location,y_location,direction)
     @x_location = x_location
     @y_location = y_location
-    @direction = direction
+    @direction = direction.upcase
   end
 
   def current_position
     "#{@x_location},#{@y_location},#{@direction}"
   end
 
-  # def read_instruction (instruction)
-  #   instruction = instruction.split(//)
-  #   instruction.each do |x|
-  #     if x == 'M'
-  #       call move()
-  #
-  #
-  # end
+  def read_instruction (instruction)
+    instruction.split(//).each do |x|
+      if x == 'M'
+        move(x)
+      else turn(x)
+      end
+      #puts current_position
+    end
+  end
 
   def move(input)
-    @x_location = @x_location + 1
+    if @direction == "N"
+      @y_location = @y_location + 1
+    elsif @direction == "E"
+      @x_location = @x_location + 1
+    elsif @direction == "S"
+      @x_location = @x_location - 1
+    else @direction == "W"
+      @x_location = @x_location - 1
+    end
   end
 
   def turn(input)
