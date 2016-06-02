@@ -4,15 +4,20 @@ class Person
   def initializer(name)
     @name = name
   end
+
+  def Greeting
+    "Hi, my name is #{name}"
+  end
+
 end
 
-class Student
+class Student < Person
   def learn
     "I get it!"
   end
 end
 
-class Instructor
+class Instructor < Person
   def teach
     "Everything in Ruby is an Object"
   end
