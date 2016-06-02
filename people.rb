@@ -1,11 +1,11 @@
 class Person
   attr_accessor :name
 
-  def initializer(name)
+  def initialize(name)
     @name = name
   end
 
-  def Greeting
+  def greeting
     "Hi, my name is #{name}"
   end
 
@@ -22,3 +22,15 @@ class Instructor < Person
     "Everything in Ruby is an Object"
   end
 end
+
+Chris = Instructor.new('Chris')
+Chris.greeting
+
+Cristina = Student.new('Cristina')
+Cristina.greeting
+
+Chris.teach
+Cristina.learn
+
+Cristina.teach
+#teach is a method in the teacher class, cristina is not in this class.
