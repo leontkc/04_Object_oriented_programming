@@ -37,10 +37,10 @@ end
 #code to put inputs and initialize it as an object
 # puts "What is the name of the paperboy?"
 # name = gets.chomp.to_s
-# side = ""
-#   until ['odd', 'even'].include?(side)
-#     puts "What side is he delivering on?"
-#     side = gets.chomp.to_s
+side = ""
+  until ['odd', 'even'].include?(side)
+    puts "What side is he delivering on?"
+    side = gets.chomp.to_s
 #   end
 #  leon = Paperboy.new(name,side)
 #  puts leon.inspect
